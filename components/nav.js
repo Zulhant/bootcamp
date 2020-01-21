@@ -2,9 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const Nav = () => (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light position: sticky" sticky style={{
-      backgroundColor: "#f1e7e8c7"
-    }} >
+    <nav className="navbar navbar-expand-lg navbar-light bg-light" >
       <div className="container">
   <a className="navbar-brand" href="#">
     <img width="250" src="https://www.masukkoding.com/wp-content/uploads/2019/07/12.png" />
@@ -40,12 +38,12 @@ const Nav = () => (
       </li>
       <li className="nav-item">
       <Link href="/masuk">
-      <button style={{ marginLeft: 5 }} type="button" class="btn btn-light">Masuk</button>
+      <button style={{ marginLeft: 5, backgroundColor : "#165761", borderRadius: 4 }} type="button" class="btn btn-light">Masuk</button>
         </Link>
       </li>
       <li className="nav-item">
       <Link href="/daftar">
-      <button style={{ marginLeft: 5 }}  type="button" class="btn btn-success">Daftar</button>
+      <button style={{ marginLeft: 5, backgroundColor : "#D6E0E1", borderRadius: 4 }}  type="button" class="btn btn-success">Daftar</button>
         </Link>
       </li>
     </ul>
