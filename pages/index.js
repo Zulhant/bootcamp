@@ -4,10 +4,12 @@ import ScreenImage from "../components/screenHome"
 import Container from "../components/meta"
 import Card from "../components/card"
 
-const Home = () => {
 
-    const data = [1,2,3]
+import fetch from "node-fetch"
 
+const Home = ({ data }) => {
+
+    console.log("data", data)
     return (
     <Container>
         <Nav />
@@ -22,13 +24,19 @@ const Home = () => {
                     flexWrap: "wrap"
                 }}>   
                 {
-                    data.map(_ => <Card />)
+                    data.map(item => <Card item={item} />)
                 }
                 </div>
         </div>
     </Container>
     )
 }
+
+  Home.getInitialProps = async ({ req }) => {
+    const res = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=c9ae52d6b0cd6c455542476a1ad114f4')
+    const json = await res.json()
+    return { data : json.results }
+  }
 
 
 export default Home

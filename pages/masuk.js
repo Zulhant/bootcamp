@@ -3,6 +3,7 @@ import Nav from '../components/nav'
 import Container from "../components/meta"
 
 import { Link } from "../routes"
+import { loadGetInitialProps } from 'next/dist/next-server/lib/utils'
 
 const Masuk = () => (
     <Container>
@@ -42,6 +43,8 @@ const Masuk = () => (
         </div>
     </Container>
 )
+
+
 
 
 export default Masuk
